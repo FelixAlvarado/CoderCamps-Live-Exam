@@ -1,0 +1,13 @@
+<h2>Home</h2>
+<h4>Create Product</h4>
+  <input ng-model="controller.product.name" placeholder="Product Name" />
+    <input ng-model="controller.product.type" placeholder="Product Type" />
+    <button ng-click="controller.save()">Submit</button>
+    <h2>Products</h2>
+    <ul>
+      <li ng-repeat="product in controller.products">
+        {{product.name}}
+        <a href="/edit/{{product._id}}">edit</a>
+         <a href="#" ng-click="controller.remove(product._id)">delete</a>
+      </li>
+    </ul>
